@@ -12,7 +12,7 @@ import com.example.demo.model.Book;
 import com.example.demo.repo.BookRepository;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:4200", "http://2601:18f:702:f970:b0a4:4756:5e91:517b", "https://kanbanfire-5712f.web.app"}) //since we’re just working locally
+@CrossOrigin(origins = {"http://localhost:4200", "https://localhost:4200", "http://2601:18f:702:f970:b0a4:4756:5e91:517b", "https://2601:18f:702:f970:b0a4:4756:5e91:517b", "https://kanbanfire-5712f.web.app", "https://kanbanfire-5712f.web.app"})
 public class BookController {
 
     BookRepository bookRepository;

@@ -23,3 +23,20 @@ spec:
             limits:
               memory: "1024Mi"
               cpu: "500m"
+kind: Service
+apiVersion: v1
+metadata:
+  name: my-java-springboot
+  labels:
+    app: my-java-springboot
+spec:
+  ports:
+    - protocol: TCP
+      port: 8443
+      targetPort: 8443
+  selector:
+    app: my-java-springboot
+    deploymentconfig: my-java-springboot
+    name: my-java-springboot
+  type: ClusterIP
+  
